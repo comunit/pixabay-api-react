@@ -33,18 +33,18 @@ class Main extends Component {
 
   render() {
     const pics = this.state.pics;
-    const showPics = pics.map((showPic) => {
+    const showPics = pics.map((showPic, index) => {
       return(
-        <div>
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="card-block">
-                <div class="img-block">
-                  <img src={showPic.webformatURL} alt="" class="img-thumbnail" />
+        <div key={index}>
+          <div className="col-sm-4">
+            <div className="card">
+              <div className="card-block">
+                <div className="img-block">
+                  <img src={showPic.webformatURL} alt="" className="img-thumbnail" />
                 </div>
-                <h3 class="card-title">{showPic.tags}</h3>
-                <p class="card-text">Views: {showPic.views}</p>
-                <a href={showPic.webformatURL} class="btn btn-primary" target="_blank">View Full Screen</a>
+                <h3 className="card-title">{showPic.tags}</h3>
+                <p className="card-text">Views: {showPic.views}</p>
+                <a href={showPic.webformatURL} className="btn btn-primary" target="_blank">View Full Screen</a>
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@ class Main extends Component {
           </form>
         </div>
       </div>
-      <div class="row">
+      <div className="row">
         {showPics}
       </div>
       </div>
