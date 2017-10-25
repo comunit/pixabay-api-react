@@ -1,0 +1,11 @@
+.img-block {
+  width: 394px;
+  height: 262px;
+  overflow: hidden;
+  display: block;
+}
+
+.img-block img {
+  width: 100%;
+  height: 100%;
+}
